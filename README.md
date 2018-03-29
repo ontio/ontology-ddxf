@@ -26,7 +26,7 @@ The DataToken includes metadata MetaData,  MetaData is a description of the data
 In the process of instantiating DToken, it will be used in combination with cryptographic components, such as digital watermarking, etc., for data transaction traceability and copyright tracking.
 
 ## Distributed Data management Protocol
-----
+
 Ontology proposes distributed data management protocol (ONT DATA), which defines a set of protocol specifications for data transactions between entities, and supports data collaboration, exchange and more functions among different entities .
 
 To protect the equity of both parties in the transaction, a middleman acting as a “guarantor” is introduced into the transaction process of the agreement to ensure the settlement process is handled securely and smoothly. The intermediary is responsible for keeping the buyer's funds and transferring the funds to the seller or the buyer based on the final trading result. Since the middleman is responsible for the final settlement of the transaction it is fair and secure. It works on a distributed ledger contract with public and decentralized management features to ensure it can suitably play role of intermediary.
