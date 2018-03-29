@@ -1,10 +1,10 @@
 [中文版](README_cn.md)
 
 
-<h1 align="center">Distributed data exchange framework</h1>
+<h1 align="center">Distributed Data eXchange Framework</h1>
 <h4 align="center">Version V0.6.0 </h4>
 
-## Overview
+## Overviewd
 ----
 
 The downsides of centralized data exchange include data caching, use of data without user authorization, and data copyright protection. Ontology proposes a Distributed Data Protocol (ONT Data). Based on the protocol ,we come up with distributed data exchange framework(DDXF) allows to customize data trading marketplaces with ensured data and financial security.With DDXF ,the developer of the ontology ecosystem will easily develop decentralized data application that meets the needs of various scenes and with various features.
@@ -32,7 +32,7 @@ Ontology proposes distributed data management protocol (ONT DATA), which defines
 
 To protect the equity of both parties in the transaction, a middleman acting as a “guarantor” is introduced into the transaction process of the agreement to ensure the settlement process is handled securely and smoothly. The intermediary is responsible for keeping the buyer's funds and transferring the funds to the seller or the buyer based on the final trading result. Since the middleman is responsible for the final settlement of the transaction it is fair and secure. It works on a distributed ledger contract with public and decentralized management features to ensure it can suitably play role of intermediary.
 
-### 参与方角色
+### Roles of Participants
 
 * **Data requester**: Data agencies/businesses/individuals who want to buy data.
 * **Data provider** Data agencies/business/individuals who want to sell data, both raw and processed. The data needs to meet local government laws and regulations.
