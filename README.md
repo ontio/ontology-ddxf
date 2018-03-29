@@ -141,7 +141,6 @@ bool Lock(byte[] serial_no,  byte[33] user_ontid,  byte[33] buyer_ontid, int amo
 
 **Unlocking position & Profit Distribution**
 
-该函数成功后，将完成资产交割，一方面完成锁定金额的清算，一方面DataToken也同时交付到需求方。该函数一般由数据提供方，或者多参与方共同签名确定后调用。
 After the function is successful, the asset delivery will be completed. One hand, the locked amount will be settled. On the one hand, the DataToken is also delivered to the requester. This function is usually invoked by the data provider, or by the multiple parties involved in the joint signature determination.
 
 ```
