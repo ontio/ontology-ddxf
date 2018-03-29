@@ -5,7 +5,6 @@
 <h4 align="center">Version V0.6.0 </h4>
 
 ## Overview
-----
 
 The downsides of centralized data exchange include data caching, use of data without user authorization, and data copyright protection. Ontology proposes a Distributed Data Protocol (ONT Data). Based on the protocol ,we come up with distributed data exchange framework(DDXF) allows to customize data trading marketplaces with ensured data and financial security.With DDXF ,the developer of the ontology ecosystem will easily develop decentralized data application that meets the needs of various scenes and with various features.
 
@@ -19,7 +18,7 @@ Main functions of DDXF are as below：
 * a series of cryptographic components ,e.g. digital watermarking technology
 
 ## what is DataToken
-----
+
 DToken (short for DataToken),which is the mapping of any asset or data in the reality to the digital assets of Ontology blockchain.For data or offchain assets to be traded, it is necessary to define Data eXchange smart contracts according to ontology contract asset specification, so as to facilitate chain transactions.
 
 The DataToken includes metadata MetaData,  MetaData is a description of the data structure and constraints of the capitalized data. 
@@ -94,7 +93,7 @@ In many cases, the participation of the marketplace can effectively define the d
 
 
 ## Getting Started with DDXF
-----
+
 ### 1 Preparations
 
 * Register ONT ID
