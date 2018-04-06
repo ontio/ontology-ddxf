@@ -119,7 +119,7 @@ namespace ClearingContract
 
             BigInteger val = amount.AsBigInteger();
             if ( !AlterBalance(buyer_ontid, asset_id, val, "sub", "avail") ) return false;
-                
+
             Storage.Put(Storage.CurrentContext, LockOrderStatusKey.Concat(serial_no), Locked);
             Storage.Put(Storage.CurrentContext, LockOrderAmountKey.Concat(serial_no), amount);
             Storage.Put(Storage.CurrentContext, LockOrderAssetKey.Concat(serial_no), asset_id);
