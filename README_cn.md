@@ -1,8 +1,8 @@
-[English Version](README.md)
+[English](README.md) / 中文
 
 
 <h1 align="center">去中心化数据交易应用框架</h1>
-<h4 align="center">版本 V0.6.0 </h4>
+<p align="center" class="version">Version 0.7.0 </p>
 
 ## 概述
 
