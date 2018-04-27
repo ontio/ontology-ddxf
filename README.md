@@ -8,7 +8,7 @@ English / [中文](README_cn.md)
 
 The downsides of centralized data exchange include data caching, use of data without user authorization, and data copyright protection. Ontology proposes a Distributed Data Protocol (ONT Data). Based on the protocol ,we come up with distributed data exchange framework(DDXF) allows to customize data trading marketplaces with ensured data and financial security.With DDXF ,the developer of the ontology ecosystem will easily develop decentralized data application that meets the needs of various scenes and with various features.
 
-DDXF uses blockchain , smart contract and a series of cryptographic components, the application can be very convenient for the implementation of copyright protection, data sharing and other scene requirements.
+DDXF uses blockchain , smart contract and a series of Smart Contracts,transaction SDK and cryptographic components, the application can be very convenient for the implementation of copyright protection, data sharing and other scene requirements.
 
 Main functions of DDXF are as below：
 
