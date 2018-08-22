@@ -56,6 +56,7 @@ CreateInstance
 
 Arguments:
   template_id            模板ID
+  metadata               描述该实例相关信息的一个json数据
   payments               payment数组，payment是(payer, amount) 二元组
   payer_threshold        后续操作所需的最少付款人签名数量
   payees                 收款人列表，按照模版中的顺序匹配分配比例
