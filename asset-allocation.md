@@ -71,6 +71,7 @@ Event: Instance("create", instance_id)
 PayeeParam
 
 Arguments:
+  instance_id          实例ID
   payee_threshold      最少收款人签名数量
   payee                收款人，需满足门限数量
 
@@ -102,8 +103,6 @@ Lock
 Arguments:
   instance_id         实例ID
   lock_time           锁定期限
-  payment_time        付款期限
-  collection_time     收款期限
   Payer               付款人（数组）
 
 Event: Instance("Lock", instance_id)
