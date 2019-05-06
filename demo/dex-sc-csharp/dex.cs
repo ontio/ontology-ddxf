@@ -81,27 +81,27 @@ namespace ClearingContract
             byte[] orderStatus = Storage.Get(Storage.CurrentContext, LockOrderStatusKey.Concat(serial_no));
             if (orderStatus.Length == 0) return false;
 
-	    if (orderStatus[0] != Locked[0]) return false;
+            if (orderStatus[0] != Locked[0]) return false;
 
-	    byte[] receiver = Storage.Get(Storage.CurrentContext, LockOrderReceiverKey.Concat(serial_no));
-	    byte[] buyer_ontid = Storage.Get(Storage.CurrentContext, LockOrderOwnerKey.Concat(serial_no));
+            byte[] receiver = Storage.Get(Storage.CurrentContext, LockOrderReceiverKey.Concat(serial_no));
+            byte[] buyer_ontid = Storage.Get(Storage.CurrentContext, LockOrderOwnerKey.Concat(serial_no));
 
-	    if (!Equals(receiver, user_ontid)) return false;
+            if (!Equals(receiver, user_ontid)) return false;
 
-	    //TODO: check signature here
-	    BigInteger amount = Storage.Get(Storage.CurrentContext, LockOrderAmountKey.Concat(serial_no)).AsBigInteger();
-	    if (user_bounty + issuer_bounty > amount)
-		return false;
+            //TODO: check signature here
+            BigInteger amount = Storage.Get(Storage.CurrentContext, LockOrderAmountKey.Concat(serial_no)).AsBigInteger();
+            if (user_bounty + issuer_bounty > amount) return false;
 
-	    //user += user_bounty
-	    //issuer += issuer_bounty
-	    AlterBalance(user_ontid, asset_id, user_bounty, "add", "both");
-	    AlterBalance(issuer_id, asset_id, issuer_bounty, "add", "both");
+            //user += user_bounty
+            //issuer += issuer_bounty
+            AlterBalance(user_ontid, asset_id, user_bounty, "add", "both");
+            AlterBalance(issuer_id, asset_id, issuer_bounty, "add", "both");
 
-	    AlterBalance(buyer_ontid, asset_id, amount, "sub", "balance");
-	    Storage.Put(Storage.CurrentContext, LockOrderStatusKey.Concat(serial_no), Unlocked);
-	    return true;
+            AlterBalance(buyer_ontid, asset_id, amount, "sub", "balance");
+            Storage.Put(Storage.CurrentContext, LockOrderStatusKey.Concat(serial_no), Unlocked);
+            return true;
         }
+
         public static bool Lock(byte[] serial_no, byte[] user_ontid, byte[] buyer_ontid, 
                                 byte[] asset_id, byte[] amount, byte[] sig)
         {
@@ -114,19 +114,19 @@ namespace ClearingContract
             byte[] orderStatus = Storage.Get(Storage.CurrentContext, LockOrderStatusKey.Concat(serial_no));
             if (orderStatus.Length != 0) return false;
 
-	    //the order does not exist
-	    //TODO: check buyer's signature
+            //the order does not exist
+            //TODO: check buyer's signature
 
-	    BigInteger val = amount.AsBigInteger();
-	    if ( !AlterBalance(buyer_ontid, asset_id, val, "sub", "avail") ) return false;
-            
-	    Storage.Put(Storage.CurrentContext, LockOrderStatusKey.Concat(serial_no), Locked);
-	    Storage.Put(Storage.CurrentContext, LockOrderAmountKey.Concat(serial_no), amount);
-	    Storage.Put(Storage.CurrentContext, LockOrderAssetKey.Concat(serial_no), asset_id);
-	    Storage.Put(Storage.CurrentContext, LockOrderOwnerKey.Concat(serial_no), buyer_ontid);
-	    Storage.Put(Storage.CurrentContext, LockOrderReceiverKey.Concat(serial_no), user_ontid);
+            BigInteger val = amount.AsBigInteger();
+            if ( !AlterBalance(buyer_ontid, asset_id, val, "sub", "avail") ) return false;
 
-	    return true;
+            Storage.Put(Storage.CurrentContext, LockOrderStatusKey.Concat(serial_no), Locked);
+            Storage.Put(Storage.CurrentContext, LockOrderAmountKey.Concat(serial_no), amount);
+            Storage.Put(Storage.CurrentContext, LockOrderAssetKey.Concat(serial_no), asset_id);
+            Storage.Put(Storage.CurrentContext, LockOrderOwnerKey.Concat(serial_no), buyer_ontid);
+            Storage.Put(Storage.CurrentContext, LockOrderReceiverKey.Concat(serial_no), user_ontid);
+
+            return true;
         }
         
         public static bool Deposit(byte[] ontid, byte[] asset_id, int amount)
@@ -153,6 +153,7 @@ namespace ClearingContract
             }
             return value;
         }
+
         // get smart contract script hash
         private static byte[] GetReceiver()
         {
@@ -197,6 +198,7 @@ namespace ClearingContract
             Storage.Put(Storage.CurrentContext, BalanceKey.Concat(asset_id).Concat(ontid), balance.AsByteArray());
             return true;
         }
+
         private static byte[] GetAdmin()
         {
             return Storage.Get(Storage.CurrentContext, AdminKey);
@@ -220,6 +222,7 @@ namespace ClearingContract
                 return false;
             }
         }
+
         private static byte[] GetByte(byte i)
         {
             byte[] bytes = new byte[256] {
