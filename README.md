@@ -17,24 +17,24 @@ Main functions of DDXF are as below：
 * SDKs for Data eXchange
 * a series of cryptographic components ,e.g. digital watermarking technology
 
-## what is DataToken
+## What is DataToken
 
-DToken (short for DataToken),which is the mapping of any asset or data in the reality to the digital assets of Ontology blockchain.For data or offchain assets to be traded, it is necessary to define Data eXchange smart contracts according to ontology contract asset specification, so as to facilitate chain transactions.
+DToken (short for DataToken) maps any asset or data in the real world to the digital assets in Ontology blockchain. For data or offchain assets to be traded, it is necessary to define Data eXchange smart contracts according to ontology contract asset specification, so as to facilitate chain transactions.
 
-The DataToken includes metadata MetaData,  MetaData is a description of the data structure and constraints of the capitalized data. 
+The DataToken includes metadata MetaData,  MetaData is a description of the data structure and constraints for the capitalized data. 
 
-In the process of instantiating DToken, it will be used in combination with cryptographic components, such as digital watermarking, etc., for data transaction traceability and copyright tracking.
+In the process of instantiating the DToken, it will be used in combination with cryptographic components, such as digital watermarking, etc., for data transaction traceability and copyright tracking.
 
-## Distributed Data management Protocol
+## Distributed Data Management Protocol
 
-Ontology proposes distributed data management protocol (ONT DATA), which defines a set of protocol specifications for data transactions between entities, and supports data collaboration, exchange and more functions among different entities .
+Ontology proposes a distributed data management protocol (ONT DATA), which defines a set of protocol specifications for data transactions between entities whiling supporting data collaboration, exchange and more functions among different entities .
 
-To protect the equity of both parties in the transaction, a middleman acting as a “guarantor” is introduced into the transaction process of the agreement to ensure the settlement process is handled securely and smoothly. The intermediary is responsible for keeping the buyer's funds and transferring the funds to the seller or the buyer based on the final trading result. Since the middleman is responsible for the final settlement of the transaction it is fair and secure. It works on a distributed ledger contract with public and decentralized management features to ensure it can suitably play role of intermediary.
+To protect the equity of both parties in the transaction, a middleman acting as a “guarantor” is introduced into the transaction process of the agreement to ensure the settlement process is handled securely and smoothly. This intermediary is responsible for keeping the buyer's funds and transferring the funds to the seller or the buyer based on the final trading agreement. The middleman is responsible for the fairness and the security of the final settlement for the transaction. THe ""guarantor" works on a distributed ledger contract with public and decentralized management features thus it is considered as a suitably role of being an intermediary.
 
 ### Roles of Participants
 
 * **Data requester**: Data agencies/businesses/individuals who want to buy data.
-* **Data provider** Data agencies/business/individuals who want to sell data, both raw and processed. The data needs to meet local government laws and regulations.
+* **Data provider** Data agencies/business/individuals who want to sell data, both raw and processed. The data needs to comply with local laws and regulations.
 * **User Agent**: Responsible for interacting with users to meet user authorization requirements for data transaction. User agents can be diversified (enterprise OA systems, internet platforms, or even simple SMS gateways), but they need to be fully implemented as defined in the application protocol framework's user license protocol.
 * **Data owner**: The data subject, which can be institutions/businesses/individuals.
 * **Decentralized Marketplace**: Decentralized Marketplace does not involve digital assets handling, only as a service institution, the main work includes: 1 run websites for visual data exchanging 2, the development of data exchange standards, for both parties and the transaction participants. There will be a lot of differences in data exchange standards in different industries, so there will be a variety of different stardards and rules of data exchanges.
