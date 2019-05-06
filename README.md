@@ -43,20 +43,20 @@ To protect the equity of both parties in the transaction, a middleman acting as 
 
 ### Work mode
 
-According to different scenarios, decentralized data exchanging are divided into two patterns ,point to point model and exchange participation model. DAPP developers can understand the following patterns and choose appropriate pattern for design and development.
+According to different scenarios, decentralized data exchanging are divided into two patterns , point to point model and exchange participation model. DAPP developers can understand the following patterns and choose appropriate pattern for design and development.
 
-> Note: In the process,Data requester, Data provider, and Data owner could be multiple participants.
+> Note: In the process data requester, data provider and data owner can be multiple participants.
 
 #### Point to Point Model
 
-In Point to Point Model, Decentralized Marketplace does not need to participate or participate lightly, for example, the exchange of credit reporting between credit reporting enterprises. This mode is more suitable for the scenarios in which the relationship between the buyer and the buyer is clear, exchange procedure is relatively simple, or exchange standard has been established. To use it, the transaction participants need to integrate or use SDK to implement the transaction process.
+In Point to Point Model, Decentralized Marketplace does not need to participate or only participate lightly. A typical example would be the exchange of credit reporting between credit reporting enterprises. This model is more suitable for the scenarios in which the relationship between the buyer and the seller is clear, exchange procedure is relatively simple or exchange standard has been established. In order to use it, the transaction participants need to integrate or use SDK to implement the transaction process.
 
 ![](images/workflow.png)
 
 
 * Preparations
 
-    1 All transaction participants register ONT ID.
+    1 All transaction participants must register ONT IDs.
 
     2 Before the transaction request is initiated, the requester first deposits funds to the contract address.
 
@@ -70,7 +70,7 @@ In Point to Point Model, Decentralized Marketplace does not need to participate 
  
 * Uploading data
 
-    The data provider generates a one-time session key according to the symmetric-key algorithm supported by the requester, uses it to encrypt the data and data characteristic values of the transaction, and sends the ciphertext to an intermediate storage system, e.g. IPFS.
+    The data provider generates a one-time session key according to the symmetric-key algorithm supported by the requester, using it to encrypt the data and data characteristic values of the transaction and then sends the ciphertext to an intermediate storage system, e.g. IPFS.
 
 * Unlocking position & Profit Distribution
 
